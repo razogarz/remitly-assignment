@@ -1,0 +1,162 @@
+{
+  "invalidData": {
+    "PolicyName": "root",
+    "PolicyDocument": null
+  },
+  "asteriskInSingle":{
+    "PolicyName": "root",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "IamListAccess",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "*"
+        }
+      ]
+    }
+  },
+  "asteriskInOneOfThree":{
+    "PolicyName": "root",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "IamListAccess",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "ulu"
+        },
+        {
+          "Sid": "IamListAccess2",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "mulu"
+        },
+        {
+          "Sid": "IamListAccess3",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "*"
+        }
+      ]
+    }
+  },
+  "asteriskNotInSingle":{
+    "PolicyName": "root",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "IamListAccess",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "ulumulu"
+        }
+      ]
+    }
+  },
+  "asteriskInNoneOfThree":{
+    "PolicyName": "root",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "IamListAccess",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "ulumulu"
+        },
+        {
+          "Sid": "IamListAccess2",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "ulumulu2"
+        },
+        {
+          "Sid": "IamListAccess3",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "ulumulu3"
+        }
+      ]
+    }
+  },
+  "threeAsterisksInOne":{
+    "PolicyName": "root",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "IamListAccess",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "***"
+        }
+      ]
+    }
+  },
+  "threeAsterisksInTwo": {
+    "PolicyName": "root",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "IamListAccess",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "***"
+        },
+        {
+          "Sid": "IamListAccess2",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "*"
+        },
+        {
+          "Sid": "IamListAccess3",
+          "Effect": "Allow",
+          "Action": [
+            "iam:ListRoles",
+            "iam:ListUsers"
+          ],
+          "Resource": "***"
+        }
+      ]
+    }
+  }
+}
